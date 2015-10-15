@@ -1,0 +1,26 @@
+C:\Users\kaliandkanchan\Documents\SHERIDAN\INFO39014 CST Capstone Project\CapstoneStructure\CapstoneStructure\Job Postings\bin\Job Postings.dll.config
+C:\Users\kaliandkanchan\Documents\SHERIDAN\INFO39014 CST Capstone Project\CapstoneStructure\CapstoneStructure\Job Postings\bin\Job Postings.dll
+C:\Users\kaliandkanchan\Documents\SHERIDAN\INFO39014 CST Capstone Project\CapstoneStructure\CapstoneStructure\Job Postings\bin\Job Postings.pdb
+C:\Users\kaliandkanchan\Documents\SHERIDAN\INFO39014 CST Capstone Project\CapstoneStructure\CapstoneStructure\Job Postings\bin\Antlr3.Runtime.dll
+C:\Users\kaliandkanchan\Documents\SHERIDAN\INFO39014 CST Capstone Project\CapstoneStructure\CapstoneStructure\Job Postings\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\kaliandkanchan\Documents\SHERIDAN\INFO39014 CST Capstone Project\CapstoneStructure\CapstoneStructure\Job Postings\bin\Newtonsoft.Json.dll
+C:\Users\kaliandkanchan\Documents\SHERIDAN\INFO39014 CST Capstone Project\CapstoneStructure\CapstoneStructure\Job Postings\bin\System.Web.Helpers.dll
+C:\Users\kaliandkanchan\Documents\SHERIDAN\INFO39014 CST Capstone Project\CapstoneStructure\CapstoneStructure\Job Postings\bin\System.Web.Mvc.dll
+C:\Users\kaliandkanchan\Documents\SHERIDAN\INFO39014 CST Capstone Project\CapstoneStructure\CapstoneStructure\Job Postings\bin\System.Web.Optimization.dll
+C:\Users\kaliandkanchan\Documents\SHERIDAN\INFO39014 CST Capstone Project\CapstoneStructure\CapstoneStructure\Job Postings\bin\System.Web.Razor.dll
+C:\Users\kaliandkanchan\Documents\SHERIDAN\INFO39014 CST Capstone Project\CapstoneStructure\CapstoneStructure\Job Postings\bin\System.Web.WebPages.Deployment.dll
+C:\Users\kaliandkanchan\Documents\SHERIDAN\INFO39014 CST Capstone Project\CapstoneStructure\CapstoneStructure\Job Postings\bin\System.Web.WebPages.dll
+C:\Users\kaliandkanchan\Documents\SHERIDAN\INFO39014 CST Capstone Project\CapstoneStructure\CapstoneStructure\Job Postings\bin\System.Web.WebPages.Razor.dll
+C:\Users\kaliandkanchan\Documents\SHERIDAN\INFO39014 CST Capstone Project\CapstoneStructure\CapstoneStructure\Job Postings\bin\WebGrease.dll
+C:\Users\kaliandkanchan\Documents\SHERIDAN\INFO39014 CST Capstone Project\CapstoneStructure\CapstoneStructure\Job Postings\bin\System.Web.Helpers.xml
+C:\Users\kaliandkanchan\Documents\SHERIDAN\INFO39014 CST Capstone Project\CapstoneStructure\CapstoneStructure\Job Postings\bin\System.Web.Mvc.xml
+C:\Users\kaliandkanchan\Documents\SHERIDAN\INFO39014 CST Capstone Project\CapstoneStructure\CapstoneStructure\Job Postings\bin\System.Web.Optimization.xml
+C:\Users\kaliandkanchan\Documents\SHERIDAN\INFO39014 CST Capstone Project\CapstoneStructure\CapstoneStructure\Job Postings\bin\System.Web.Razor.xml
+C:\Users\kaliandkanchan\Documents\SHERIDAN\INFO39014 CST Capstone Project\CapstoneStructure\CapstoneStructure\Job Postings\bin\System.Web.WebPages.xml
+C:\Users\kaliandkanchan\Documents\SHERIDAN\INFO39014 CST Capstone Project\CapstoneStructure\CapstoneStructure\Job Postings\bin\System.Web.WebPages.Deployment.xml
+C:\Users\kaliandkanchan\Documents\SHERIDAN\INFO39014 CST Capstone Project\CapstoneStructure\CapstoneStructure\Job Postings\bin\System.Web.WebPages.Razor.xml
+C:\Users\kaliandkanchan\Documents\SHERIDAN\INFO39014 CST Capstone Project\CapstoneStructure\CapstoneStructure\Job Postings\bin\Antlr3.Runtime.pdb
+C:\Users\kaliandkanchan\Documents\SHERIDAN\INFO39014 CST Capstone Project\CapstoneStructure\CapstoneStructure\Job Postings\bin\Newtonsoft.Json.xml
+C:\Users\kaliandkanchan\Documents\SHERIDAN\INFO39014 CST Capstone Project\CapstoneStructure\CapstoneStructure\Job Postings\obj\Debug\Job Postings.csprojResolveAssemblyReference.cache
+C:\Users\kaliandkanchan\Documents\SHERIDAN\INFO39014 CST Capstone Project\CapstoneStructure\CapstoneStructure\Job Postings\obj\Debug\Job Postings.dll
+C:\Users\kaliandkanchan\Documents\SHERIDAN\INFO39014 CST Capstone Project\CapstoneStructure\CapstoneStructure\Job Postings\obj\Debug\Job Postings.pdb

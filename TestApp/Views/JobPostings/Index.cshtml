@@ -1,0 +1,106 @@
+﻿@model IEnumerable<CapModel.JobPosting>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.JobTitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.JobType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PostStartDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PostEndDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumPositions)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.JobLevel)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.JobCompensation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.JobReq)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.JobDuties)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.JobVisible)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Company.CompName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Recruiter.Department)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.JobTitle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.JobType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PostStartDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PostEndDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumPositions)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.JobLevel)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.JobCompensation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.JobReq)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.JobDuties)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.JobVisible)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Company.CompName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Recruiter.Department)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.JobPostId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.JobPostId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.JobPostId })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,495 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Model1" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+  <EntityContainer Name="Model1Container" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Users" EntityType="Model1.User" />
+    <EntitySet Name="Locations" EntityType="Model1.Location" />
+    <EntitySet Name="Recruiters" EntityType="Model1.Recruiter" />
+    <AssociationSet Name="UserRecruiter" Association="Model1.UserRecruiter">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Recruiter" EntitySet="Recruiters" />
+    </AssociationSet>
+    <EntitySet Name="JobSeekers" EntityType="Model1.JobSeeker" />
+    <AssociationSet Name="UserJobSeeker" Association="Model1.UserJobSeeker">
+      <End Role="User" EntitySet="Users" />
+      <End Role="JobSeeker" EntitySet="JobSeekers" />
+    </AssociationSet>
+    <AssociationSet Name="JobSeekerLocation" Association="Model1.JobSeekerLocation">
+      <End Role="JobSeeker" EntitySet="JobSeekers" />
+      <End Role="Location" EntitySet="Locations" />
+    </AssociationSet>
+    <EntitySet Name="SkillCollections" EntityType="Model1.SkillCollection" />
+    <EntitySet Name="Certifications" EntityType="Model1.Certification" />
+    <AssociationSet Name="RecruiterLocation" Association="Model1.RecruiterLocation">
+      <End Role="Recruiter" EntitySet="Recruiters" />
+      <End Role="Location" EntitySet="Locations" />
+    </AssociationSet>
+    <AssociationSet Name="JobSeekerCertification" Association="Model1.JobSeekerCertification">
+      <End Role="JobSeeker" EntitySet="JobSeekers" />
+      <End Role="Certification" EntitySet="Certifications" />
+    </AssociationSet>
+    <EntitySet Name="Educations" EntityType="Model1.Education" />
+    <AssociationSet Name="JobSeekerEducation" Association="Model1.JobSeekerEducation">
+      <End Role="JobSeeker" EntitySet="JobSeekers" />
+      <End Role="Education" EntitySet="Educations" />
+    </AssociationSet>
+    <EntitySet Name="WorkExperiences" EntityType="Model1.WorkExperience" />
+    <AssociationSet Name="JobSeekerWorkExperience" Association="Model1.JobSeekerWorkExperience">
+      <End Role="JobSeeker" EntitySet="JobSeekers" />
+      <End Role="WorkExperience" EntitySet="WorkExperiences" />
+    </AssociationSet>
+    <EntitySet Name="Companies" EntityType="Model1.Company" />
+    <AssociationSet Name="UserCompany" Association="Model1.UserCompany">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Company" EntitySet="Companies" />
+    </AssociationSet>
+    <AssociationSet Name="CompanyLocation" Association="Model1.CompanyLocation">
+      <End Role="Company" EntitySet="Companies" />
+      <End Role="Location" EntitySet="Locations" />
+    </AssociationSet>
+    <AssociationSet Name="CompanyRecruiter" Association="Model1.CompanyRecruiter">
+      <End Role="Company" EntitySet="Companies" />
+      <End Role="Recruiter" EntitySet="Recruiters" />
+    </AssociationSet>
+    <EntitySet Name="Followers" EntityType="Model1.Follower" />
+    <EntitySet Name="NewsPosts" EntityType="Model1.NewsPost" />
+    <AssociationSet Name="CompanyNewsPost" Association="Model1.CompanyNewsPost">
+      <End Role="Company" EntitySet="Companies" />
+      <End Role="NewsPost" EntitySet="NewsPosts" />
+    </AssociationSet>
+    <EntitySet Name="JobAreas" EntityType="Model1.JobArea" />
+    <EntitySet Name="JobPostings" EntityType="Model1.JobPosting" />
+    <AssociationSet Name="CompanyJobPosting" Association="Model1.CompanyJobPosting">
+      <End Role="Company" EntitySet="Companies" />
+      <End Role="JobPosting" EntitySet="JobPostings" />
+    </AssociationSet>
+    <AssociationSet Name="RecruiterJobPosting" Association="Model1.RecruiterJobPosting">
+      <End Role="Recruiter" EntitySet="Recruiters" />
+      <End Role="JobPosting" EntitySet="JobPostings" />
+    </AssociationSet>
+    <AssociationSet Name="JobAreaJobPosting" Association="Model1.JobAreaJobPosting">
+      <End Role="JobArea" EntitySet="JobAreas" />
+      <End Role="JobPosting" EntitySet="JobPostings" />
+    </AssociationSet>
+    <EntitySet Name="UserMedias" EntityType="Model1.UserMedia" />
+    <AssociationSet Name="JobSeekerUserMedia" Association="Model1.JobSeekerUserMedia">
+      <End Role="JobSeeker" EntitySet="JobSeekers" />
+      <End Role="UserMedia" EntitySet="UserMedias" />
+    </AssociationSet>
+    <EntitySet Name="UserProfiles" EntityType="Model1.UserProfile" />
+    <AssociationSet Name="UserUserProfile" Association="Model1.UserUserProfile">
+      <End Role="User" EntitySet="Users" />
+      <End Role="UserProfile" EntitySet="UserProfiles" />
+    </AssociationSet>
+    <AssociationSet Name="JobPostingUserMedia" Association="Model1.JobPostingUserMedia">
+      <End Role="JobPosting" EntitySet="JobPostings" />
+      <End Role="UserMedia" EntitySet="UserMedias" />
+    </AssociationSet>
+    <AssociationSet Name="CompanyUserMedia" Association="Model1.CompanyUserMedia">
+      <End Role="Company" EntitySet="Companies" />
+      <End Role="UserMedia" EntitySet="UserMedias" />
+    </AssociationSet>
+    <EntitySet Name="JobApplieds" EntityType="Model1.JobApplied" />
+    <AssociationSet Name="JobPostingJobApplied" Association="Model1.JobPostingJobApplied">
+      <End Role="JobPosting" EntitySet="JobPostings" />
+      <End Role="JobApplied" EntitySet="JobApplieds" />
+    </AssociationSet>
+    <AssociationSet Name="JobSeekerJobApplied" Association="Model1.JobSeekerJobApplied">
+      <End Role="JobSeeker" EntitySet="JobSeekers" />
+      <End Role="JobApplied" EntitySet="JobApplieds" />
+    </AssociationSet>
+    <AssociationSet Name="JobPostingLocation" Association="Model1.JobPostingLocation">
+      <End Role="JobPosting" EntitySet="JobPostings" />
+      <End Role="Location" EntitySet="Locations" />
+    </AssociationSet>
+    <AssociationSet Name="JobSeekerSkillCollection" Association="Model1.JobSeekerSkillCollection">
+      <End Role="JobSeeker" EntitySet="JobSeekers" />
+      <End Role="SkillCollection" EntitySet="SkillCollections" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="String" Nullable="false" />
+    <Property Name="FirstName" Type="String" Nullable="false" />
+    <Property Name="LastName" Type="String" Nullable="false" />
+    <Property Name="Email" Type="String" Nullable="false" />
+    <Property Name="VerCode" Type="String" Nullable="false" />
+    <Property Name="isVerified" Type="String" Nullable="false" />
+    <Property Name="Password" Type="String" Nullable="false" />
+    <Property Name="UserType" Type="String" Nullable="false" />
+    <NavigationProperty Name="Recruiter" Relationship="Model1.UserRecruiter" FromRole="User" ToRole="Recruiter" />
+    <NavigationProperty Name="JobSeeker" Relationship="Model1.UserJobSeeker" FromRole="User" ToRole="JobSeeker" />
+    <NavigationProperty Name="Company" Relationship="Model1.UserCompany" FromRole="User" ToRole="Company" />
+    <NavigationProperty Name="UserProfile" Relationship="Model1.UserUserProfile" FromRole="User" ToRole="UserProfile" />
+  </EntityType>
+  <EntityType Name="Location">
+    <Key>
+      <PropertyRef Name="LocationId" />
+    </Key>
+    <Property Name="LocationId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UnitNum" Type="String" Nullable="false" />
+    <Property Name="AptNum" Type="String" Nullable="false" />
+    <Property Name="StreetAdd" Type="String" Nullable="false" />
+    <Property Name="City" Type="String" Nullable="false" />
+    <Property Name="Province" Type="String" Nullable="false" />
+    <Property Name="Country" Type="String" Nullable="false" />
+    <NavigationProperty Name="JobSeeker" Relationship="Model1.JobSeekerLocation" FromRole="Location" ToRole="JobSeeker" />
+    <NavigationProperty Name="Recruiter" Relationship="Model1.RecruiterLocation" FromRole="Location" ToRole="Recruiter" />
+    <NavigationProperty Name="Company" Relationship="Model1.CompanyLocation" FromRole="Location" ToRole="Company" />
+    <NavigationProperty Name="JobPosting" Relationship="Model1.JobPostingLocation" FromRole="Location" ToRole="JobPosting" />
+  </EntityType>
+  <EntityType Name="Recruiter">
+    <Key>
+      <PropertyRef Name="RecId" />
+    </Key>
+    <Property Name="RecId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Department" Type="String" Nullable="false" />
+    <Property Name="JobTitle" Type="String" Nullable="false" />
+    <Property Name="HasAccess" Type="String" Nullable="false" />
+    <NavigationProperty Name="User" Relationship="Model1.UserRecruiter" FromRole="Recruiter" ToRole="User" />
+    <NavigationProperty Name="Location" Relationship="Model1.RecruiterLocation" FromRole="Recruiter" ToRole="Location" />
+    <NavigationProperty Name="Company" Relationship="Model1.CompanyRecruiter" FromRole="Recruiter" ToRole="Company" />
+    <Property Name="CompanyCompId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="JobPostings" Relationship="Model1.RecruiterJobPosting" FromRole="Recruiter" ToRole="JobPosting" />
+  </EntityType>
+  <Association Name="UserRecruiter">
+    <End Type="Model1.User" Role="User" Multiplicity="1" />
+    <End Type="Model1.Recruiter" Role="Recruiter" Multiplicity="1" />
+  </Association>
+  <EntityType Name="JobSeeker">
+    <Key>
+      <PropertyRef Name="JSId" />
+    </Key>
+    <Property Name="JSId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SkillSummary" Type="String" Nullable="false" />
+    <Property Name="PhoneNumber" Type="String" Nullable="false" />
+    <Property Name="Visibility" Type="String" Nullable="false" />
+    <NavigationProperty Name="User" Relationship="Model1.UserJobSeeker" FromRole="JobSeeker" ToRole="User" />
+    <NavigationProperty Name="Location" Relationship="Model1.JobSeekerLocation" FromRole="JobSeeker" ToRole="Location" />
+    <NavigationProperty Name="Certifications" Relationship="Model1.JobSeekerCertification" FromRole="JobSeeker" ToRole="Certification" />
+    <NavigationProperty Name="Educations" Relationship="Model1.JobSeekerEducation" FromRole="JobSeeker" ToRole="Education" />
+    <NavigationProperty Name="WorkExperiences" Relationship="Model1.JobSeekerWorkExperience" FromRole="JobSeeker" ToRole="WorkExperience" />
+    <NavigationProperty Name="UserMedia" Relationship="Model1.JobSeekerUserMedia" FromRole="JobSeeker" ToRole="UserMedia" />
+    <NavigationProperty Name="JobApplieds" Relationship="Model1.JobSeekerJobApplied" FromRole="JobSeeker" ToRole="JobApplied" />
+    <NavigationProperty Name="SkillCollections" Relationship="Model1.JobSeekerSkillCollection" FromRole="JobSeeker" ToRole="SkillCollection" />
+  </EntityType>
+  <Association Name="UserJobSeeker">
+    <End Type="Model1.User" Role="User" Multiplicity="1" />
+    <End Type="Model1.JobSeeker" Role="JobSeeker" Multiplicity="1" />
+  </Association>
+  <Association Name="JobSeekerLocation">
+    <End Type="Model1.JobSeeker" Role="JobSeeker" Multiplicity="1" />
+    <End Type="Model1.Location" Role="Location" Multiplicity="1" />
+  </Association>
+  <EntityType Name="SkillCollection">
+    <Key>
+      <PropertyRef Name="SkillId" />
+    </Key>
+    <Property Name="SkillId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SkillName" Type="String" Nullable="false" />
+    <NavigationProperty Name="JobSeeker" Relationship="Model1.JobSeekerSkillCollection" FromRole="SkillCollection" ToRole="JobSeeker" />
+    <Property Name="JobSeekerJSId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Certification">
+    <Key>
+      <PropertyRef Name="CertId" />
+    </Key>
+    <Property Name="CertId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CertName" Type="String" Nullable="false" />
+    <Property Name="CertAuthority" Type="String" Nullable="false" />
+    <Property Name="CertLicense" Type="String" Nullable="false" />
+    <Property Name="CertDate" Type="String" Nullable="false" />
+    <NavigationProperty Name="JobSeeker" Relationship="Model1.JobSeekerCertification" FromRole="Certification" ToRole="JobSeeker" />
+    <Property Name="JobSeekerJSId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <Association Name="RecruiterLocation">
+    <End Type="Model1.Recruiter" Role="Recruiter" Multiplicity="1" />
+    <End Type="Model1.Location" Role="Location" Multiplicity="1" />
+  </Association>
+  <Association Name="JobSeekerCertification">
+    <End Type="Model1.JobSeeker" Role="JobSeeker" Multiplicity="1" />
+    <End Type="Model1.Certification" Role="Certification" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="JobSeeker">
+        <PropertyRef Name="JSId" />
+      </Principal>
+      <Dependent Role="Certification">
+        <PropertyRef Name="JobSeekerJSId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Education">
+    <Key>
+      <PropertyRef Name="EduId" />
+    </Key>
+    <Property Name="EduId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CourseName" Type="String" Nullable="false" />
+    <Property Name="SchoolName" Type="String" Nullable="false" />
+    <Property Name="EduLocation" Type="String" Nullable="false" />
+    <Property Name="EduStartDate" Type="String" Nullable="false" />
+    <Property Name="EduEndDate" Type="String" Nullable="false" />
+    <Property Name="EduDescription" Type="String" Nullable="false" />
+    <Property Name="EduGrade" Type="String" Nullable="false" />
+    <NavigationProperty Name="JobSeeker" Relationship="Model1.JobSeekerEducation" FromRole="Education" ToRole="JobSeeker" />
+    <Property Name="JobSeekerJSId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <Association Name="JobSeekerEducation">
+    <End Type="Model1.JobSeeker" Role="JobSeeker" Multiplicity="1" />
+    <End Type="Model1.Education" Role="Education" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="JobSeeker">
+        <PropertyRef Name="JSId" />
+      </Principal>
+      <Dependent Role="Education">
+        <PropertyRef Name="JobSeekerJSId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="WorkExperience">
+    <Key>
+      <PropertyRef Name="ExperienceId" />
+    </Key>
+    <Property Name="ExperienceId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ExpCompany" Type="String" Nullable="false" />
+    <Property Name="ExpTitle" Type="String" Nullable="false" />
+    <Property Name="ExpLocation" Type="String" Nullable="false" />
+    <Property Name="ExpStartDate" Type="String" Nullable="false" />
+    <Property Name="ExpEndDate" Type="String" Nullable="false" />
+    <Property Name="CurrentPosition" Type="String" Nullable="false" />
+    <Property Name="ExpSummary" Type="String" Nullable="false" />
+    <NavigationProperty Name="JobSeeker" Relationship="Model1.JobSeekerWorkExperience" FromRole="WorkExperience" ToRole="JobSeeker" />
+    <Property Name="JobSeekerJSId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <Association Name="JobSeekerWorkExperience">
+    <End Type="Model1.JobSeeker" Role="JobSeeker" Multiplicity="1" />
+    <End Type="Model1.WorkExperience" Role="WorkExperience" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="JobSeeker">
+        <PropertyRef Name="JSId" />
+      </Principal>
+      <Dependent Role="WorkExperience">
+        <PropertyRef Name="JobSeekerJSId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Company">
+    <Key>
+      <PropertyRef Name="CompId" />
+    </Key>
+    <Property Name="CompId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CompName" Type="String" Nullable="false" />
+    <Property Name="CompCode" Type="String" Nullable="false" />
+    <Property Name="CompDescription" Type="String" Nullable="false" />
+    <Property Name="NumFollowers" Type="String" Nullable="false" />
+    <NavigationProperty Name="User" Relationship="Model1.UserCompany" FromRole="Company" ToRole="User" />
+    <NavigationProperty Name="Locations" Relationship="Model1.CompanyLocation" FromRole="Company" ToRole="Location" />
+    <NavigationProperty Name="Recruiters" Relationship="Model1.CompanyRecruiter" FromRole="Company" ToRole="Recruiter" />
+    <NavigationProperty Name="NewsPosts" Relationship="Model1.CompanyNewsPost" FromRole="Company" ToRole="NewsPost" />
+    <NavigationProperty Name="JobPostings" Relationship="Model1.CompanyJobPosting" FromRole="Company" ToRole="JobPosting" />
+    <NavigationProperty Name="UserMedia" Relationship="Model1.CompanyUserMedia" FromRole="Company" ToRole="UserMedia" />
+  </EntityType>
+  <Association Name="UserCompany">
+    <End Type="Model1.User" Role="User" Multiplicity="1" />
+    <End Type="Model1.Company" Role="Company" Multiplicity="1" />
+  </Association>
+  <Association Name="CompanyLocation">
+    <End Type="Model1.Company" Role="Company" Multiplicity="1" />
+    <End Type="Model1.Location" Role="Location" Multiplicity="*" />
+  </Association>
+  <Association Name="CompanyRecruiter">
+    <End Type="Model1.Company" Role="Company" Multiplicity="1" />
+    <End Type="Model1.Recruiter" Role="Recruiter" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Company">
+        <PropertyRef Name="CompId" />
+      </Principal>
+      <Dependent Role="Recruiter">
+        <PropertyRef Name="CompanyCompId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Follower">
+    <Key>
+      <PropertyRef Name="FollowId" />
+    </Key>
+    <Property Name="FollowId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ViewNews" Type="String" Nullable="false" />
+    <Property Name="ViewJobs" Type="String" Nullable="false" />
+    <Property Name="PostSeen" Type="String" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NewsPost">
+    <Key>
+      <PropertyRef Name="NPId" />
+    </Key>
+    <Property Name="NPId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" Nullable="false" />
+    <Property Name="NewsDesc" Type="String" Nullable="false" />
+    <Property Name="NewsDate" Type="String" Nullable="false" />
+    <Property Name="IsVisible" Type="String" Nullable="false" />
+    <NavigationProperty Name="Company" Relationship="Model1.CompanyNewsPost" FromRole="NewsPost" ToRole="Company" />
+    <Property Name="CompanyCompId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <Association Name="CompanyNewsPost">
+    <End Type="Model1.Company" Role="Company" Multiplicity="1" />
+    <End Type="Model1.NewsPost" Role="NewsPost" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Company">
+        <PropertyRef Name="CompId" />
+      </Principal>
+      <Dependent Role="NewsPost">
+        <PropertyRef Name="CompanyCompId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="JobArea">
+    <Key>
+      <PropertyRef Name="JobAreaId" />
+    </Key>
+    <Property Name="JobAreaId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="JAName" Type="String" Nullable="false" />
+    <NavigationProperty Name="JobPostings" Relationship="Model1.JobAreaJobPosting" FromRole="JobArea" ToRole="JobPosting" />
+  </EntityType>
+  <EntityType Name="JobPosting">
+    <Key>
+      <PropertyRef Name="JobPostId" />
+    </Key>
+    <Property Name="JobPostId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="JobTitle" Type="String" Nullable="false" />
+    <Property Name="JobType" Type="String" Nullable="false" />
+    <Property Name="PostStartDate" Type="String" Nullable="false" />
+    <Property Name="PostEndDate" Type="String" Nullable="false" />
+    <Property Name="NumPositions" Type="String" Nullable="false" />
+    <Property Name="JobLevel" Type="String" Nullable="false" />
+    <Property Name="JobCompensation" Type="String" Nullable="false" />
+    <Property Name="Description" Type="String" Nullable="false" />
+    <Property Name="JobReq" Type="String" Nullable="false" />
+    <Property Name="JobDuties" Type="String" Nullable="false" />
+    <NavigationProperty Name="Company" Relationship="Model1.CompanyJobPosting" FromRole="JobPosting" ToRole="Company" />
+    <Property Name="CompanyCompId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Recruiter" Relationship="Model1.RecruiterJobPosting" FromRole="JobPosting" ToRole="Recruiter" />
+    <Property Name="RecruiterRecId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="JobAreas" Relationship="Model1.JobAreaJobPosting" FromRole="JobPosting" ToRole="JobArea" />
+    <Property Name="JobVisible" Type="String" Nullable="false" />
+    <NavigationProperty Name="UserMedia" Relationship="Model1.JobPostingUserMedia" FromRole="JobPosting" ToRole="UserMedia" />
+    <NavigationProperty Name="JobApplieds" Relationship="Model1.JobPostingJobApplied" FromRole="JobPosting" ToRole="JobApplied" />
+    <NavigationProperty Name="Location" Relationship="Model1.JobPostingLocation" FromRole="JobPosting" ToRole="Location" />
+  </EntityType>
+  <Association Name="CompanyJobPosting">
+    <End Type="Model1.Company" Role="Company" Multiplicity="1" />
+    <End Type="Model1.JobPosting" Role="JobPosting" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Company">
+        <PropertyRef Name="CompId" />
+      </Principal>
+      <Dependent Role="JobPosting">
+        <PropertyRef Name="CompanyCompId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RecruiterJobPosting">
+    <End Type="Model1.Recruiter" Role="Recruiter" Multiplicity="1" />
+    <End Type="Model1.JobPosting" Role="JobPosting" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Recruiter">
+        <PropertyRef Name="RecId" />
+      </Principal>
+      <Dependent Role="JobPosting">
+        <PropertyRef Name="RecruiterRecId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="JobAreaJobPosting">
+    <End Type="Model1.JobArea" Role="JobArea" Multiplicity="*" />
+    <End Type="Model1.JobPosting" Role="JobPosting" Multiplicity="*" />
+  </Association>
+  <EntityType Name="UserMedia">
+    <Key>
+      <PropertyRef Name="UMediaId" />
+    </Key>
+    <Property Name="UMediaId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="VidPath" Type="String" Nullable="false" />
+    <Property Name="MediaDesc" Type="String" Nullable="false" />
+    <NavigationProperty Name="JobSeeker" Relationship="Model1.JobSeekerUserMedia" FromRole="UserMedia" ToRole="JobSeeker" />
+    <NavigationProperty Name="JobPosting" Relationship="Model1.JobPostingUserMedia" FromRole="UserMedia" ToRole="JobPosting" />
+    <NavigationProperty Name="Company" Relationship="Model1.CompanyUserMedia" FromRole="UserMedia" ToRole="Company" />
+  </EntityType>
+  <Association Name="JobSeekerUserMedia">
+    <End Type="Model1.JobSeeker" Role="JobSeeker" Multiplicity="1" />
+    <End Type="Model1.UserMedia" Role="UserMedia" Multiplicity="1" />
+  </Association>
+  <EntityType Name="UserProfile">
+    <Key>
+      <PropertyRef Name="ProfileId" />
+    </Key>
+    <Property Name="ProfileId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PicPath" Type="String" Nullable="false" />
+    <Property Name="PicDesc" Type="String" Nullable="false" />
+    <NavigationProperty Name="User" Relationship="Model1.UserUserProfile" FromRole="UserProfile" ToRole="User" />
+  </EntityType>
+  <Association Name="UserUserProfile">
+    <End Type="Model1.User" Role="User" Multiplicity="1" />
+    <End Type="Model1.UserProfile" Role="UserProfile" Multiplicity="1" />
+  </Association>
+  <Association Name="JobPostingUserMedia">
+    <End Type="Model1.JobPosting" Role="JobPosting" Multiplicity="1" />
+    <End Type="Model1.UserMedia" Role="UserMedia" Multiplicity="1" />
+  </Association>
+  <Association Name="CompanyUserMedia">
+    <End Type="Model1.Company" Role="Company" Multiplicity="1" />
+    <End Type="Model1.UserMedia" Role="UserMedia" Multiplicity="1" />
+  </Association>
+  <EntityType Name="JobApplied">
+    <Key>
+      <PropertyRef Name="JobAppId" />
+    </Key>
+    <Property Name="JobAppId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ApplicationDate" Type="String" Nullable="false" />
+    <Property Name="AppliedMessage" Type="String" Nullable="false" />
+    <NavigationProperty Name="JobPosting" Relationship="Model1.JobPostingJobApplied" FromRole="JobApplied" ToRole="JobPosting" />
+    <Property Name="JobPostingJobPostId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="JobSeeker" Relationship="Model1.JobSeekerJobApplied" FromRole="JobApplied" ToRole="JobSeeker" />
+    <Property Name="JobSeekerJSId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <Association Name="JobPostingJobApplied">
+    <End Type="Model1.JobPosting" Role="JobPosting" Multiplicity="1" />
+    <End Type="Model1.JobApplied" Role="JobApplied" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="JobPosting">
+        <PropertyRef Name="JobPostId" />
+      </Principal>
+      <Dependent Role="JobApplied">
+        <PropertyRef Name="JobPostingJobPostId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="JobSeekerJobApplied">
+    <End Type="Model1.JobSeeker" Role="JobSeeker" Multiplicity="1" />
+    <End Type="Model1.JobApplied" Role="JobApplied" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="JobSeeker">
+        <PropertyRef Name="JSId" />
+      </Principal>
+      <Dependent Role="JobApplied">
+        <PropertyRef Name="JobSeekerJSId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="JobPostingLocation">
+    <End Type="Model1.JobPosting" Role="JobPosting" Multiplicity="1" />
+    <End Type="Model1.Location" Role="Location" Multiplicity="1" />
+  </Association>
+  <Association Name="JobSeekerSkillCollection">
+    <End Type="Model1.JobSeeker" Role="JobSeeker" Multiplicity="1" />
+    <End Type="Model1.SkillCollection" Role="SkillCollection" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="JobSeeker">
+        <PropertyRef Name="JSId" />
+      </Principal>
+      <Dependent Role="SkillCollection">
+        <PropertyRef Name="JobSeekerJSId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

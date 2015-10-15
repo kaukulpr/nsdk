@@ -1,0 +1,291 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Model1StoreContainer" CdmEntityContainer="Model1Container">
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.User)">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="VerCode" ColumnName="VerCode" />
+          <ScalarProperty Name="isVerified" ColumnName="isVerified" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="UserType" ColumnName="UserType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Locations">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Location)">
+        <MappingFragment StoreEntitySet="Locations">
+          <ScalarProperty Name="LocationId" ColumnName="LocationId" />
+          <ScalarProperty Name="UnitNum" ColumnName="UnitNum" />
+          <ScalarProperty Name="AptNum" ColumnName="AptNum" />
+          <ScalarProperty Name="StreetAdd" ColumnName="StreetAdd" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Province" ColumnName="Province" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Recruiters">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Recruiter)">
+        <MappingFragment StoreEntitySet="Recruiters">
+          <ScalarProperty Name="RecId" ColumnName="RecId" />
+          <ScalarProperty Name="Department" ColumnName="Department" />
+          <ScalarProperty Name="JobTitle" ColumnName="JobTitle" />
+          <ScalarProperty Name="HasAccess" ColumnName="HasAccess" />
+          <ScalarProperty Name="CompanyCompId" ColumnName="CompanyCompId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="JobSeekers">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.JobSeeker)">
+        <MappingFragment StoreEntitySet="JobSeekers">
+          <ScalarProperty Name="JSId" ColumnName="JSId" />
+          <ScalarProperty Name="SkillSummary" ColumnName="SkillSummary" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="Visibility" ColumnName="Visibility" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SkillCollections">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.SkillCollection)">
+        <MappingFragment StoreEntitySet="SkillCollections">
+          <ScalarProperty Name="SkillId" ColumnName="SkillId" />
+          <ScalarProperty Name="SkillName" ColumnName="SkillName" />
+          <ScalarProperty Name="JobSeekerJSId" ColumnName="JobSeekerJSId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Certifications">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Certification)">
+        <MappingFragment StoreEntitySet="Certifications">
+          <ScalarProperty Name="CertId" ColumnName="CertId" />
+          <ScalarProperty Name="CertName" ColumnName="CertName" />
+          <ScalarProperty Name="CertAuthority" ColumnName="CertAuthority" />
+          <ScalarProperty Name="CertLicense" ColumnName="CertLicense" />
+          <ScalarProperty Name="CertDate" ColumnName="CertDate" />
+          <ScalarProperty Name="JobSeekerJSId" ColumnName="JobSeekerJSId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Educations">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Education)">
+        <MappingFragment StoreEntitySet="Educations">
+          <ScalarProperty Name="EduId" ColumnName="EduId" />
+          <ScalarProperty Name="CourseName" ColumnName="CourseName" />
+          <ScalarProperty Name="SchoolName" ColumnName="SchoolName" />
+          <ScalarProperty Name="EduLocation" ColumnName="EduLocation" />
+          <ScalarProperty Name="EduStartDate" ColumnName="EduStartDate" />
+          <ScalarProperty Name="EduEndDate" ColumnName="EduEndDate" />
+          <ScalarProperty Name="EduDescription" ColumnName="EduDescription" />
+          <ScalarProperty Name="EduGrade" ColumnName="EduGrade" />
+          <ScalarProperty Name="JobSeekerJSId" ColumnName="JobSeekerJSId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WorkExperiences">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.WorkExperience)">
+        <MappingFragment StoreEntitySet="WorkExperiences">
+          <ScalarProperty Name="ExperienceId" ColumnName="ExperienceId" />
+          <ScalarProperty Name="ExpCompany" ColumnName="ExpCompany" />
+          <ScalarProperty Name="ExpTitle" ColumnName="ExpTitle" />
+          <ScalarProperty Name="ExpLocation" ColumnName="ExpLocation" />
+          <ScalarProperty Name="ExpStartDate" ColumnName="ExpStartDate" />
+          <ScalarProperty Name="ExpEndDate" ColumnName="ExpEndDate" />
+          <ScalarProperty Name="CurrentPosition" ColumnName="CurrentPosition" />
+          <ScalarProperty Name="ExpSummary" ColumnName="ExpSummary" />
+          <ScalarProperty Name="JobSeekerJSId" ColumnName="JobSeekerJSId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Companies">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Company)">
+        <MappingFragment StoreEntitySet="Companies">
+          <ScalarProperty Name="CompId" ColumnName="CompId" />
+          <ScalarProperty Name="CompName" ColumnName="CompName" />
+          <ScalarProperty Name="CompCode" ColumnName="CompCode" />
+          <ScalarProperty Name="CompDescription" ColumnName="CompDescription" />
+          <ScalarProperty Name="NumFollowers" ColumnName="NumFollowers" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Followers">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Follower)">
+        <MappingFragment StoreEntitySet="Followers">
+          <ScalarProperty Name="FollowId" ColumnName="FollowId" />
+          <ScalarProperty Name="ViewNews" ColumnName="ViewNews" />
+          <ScalarProperty Name="ViewJobs" ColumnName="ViewJobs" />
+          <ScalarProperty Name="PostSeen" ColumnName="PostSeen" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NewsPosts">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.NewsPost)">
+        <MappingFragment StoreEntitySet="NewsPosts">
+          <ScalarProperty Name="NPId" ColumnName="NPId" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="NewsDesc" ColumnName="NewsDesc" />
+          <ScalarProperty Name="NewsDate" ColumnName="NewsDate" />
+          <ScalarProperty Name="IsVisible" ColumnName="IsVisible" />
+          <ScalarProperty Name="CompanyCompId" ColumnName="CompanyCompId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="JobAreas">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.JobArea)">
+        <MappingFragment StoreEntitySet="JobAreas">
+          <ScalarProperty Name="JobAreaId" ColumnName="JobAreaId" />
+          <ScalarProperty Name="JAName" ColumnName="JAName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="JobPostings">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.JobPosting)">
+        <MappingFragment StoreEntitySet="JobPostings">
+          <ScalarProperty Name="JobPostId" ColumnName="JobPostId" />
+          <ScalarProperty Name="JobTitle" ColumnName="JobTitle" />
+          <ScalarProperty Name="JobType" ColumnName="JobType" />
+          <ScalarProperty Name="PostStartDate" ColumnName="PostStartDate" />
+          <ScalarProperty Name="PostEndDate" ColumnName="PostEndDate" />
+          <ScalarProperty Name="NumPositions" ColumnName="NumPositions" />
+          <ScalarProperty Name="JobLevel" ColumnName="JobLevel" />
+          <ScalarProperty Name="JobCompensation" ColumnName="JobCompensation" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="JobReq" ColumnName="JobReq" />
+          <ScalarProperty Name="JobDuties" ColumnName="JobDuties" />
+          <ScalarProperty Name="CompanyCompId" ColumnName="CompanyCompId" />
+          <ScalarProperty Name="RecruiterRecId" ColumnName="RecruiterRecId" />
+          <ScalarProperty Name="JobVisible" ColumnName="JobVisible" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserMedias">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.UserMedia)">
+        <MappingFragment StoreEntitySet="UserMedias">
+          <ScalarProperty Name="UMediaId" ColumnName="UMediaId" />
+          <ScalarProperty Name="VidPath" ColumnName="VidPath" />
+          <ScalarProperty Name="MediaDesc" ColumnName="MediaDesc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserProfiles">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.UserProfile)">
+        <MappingFragment StoreEntitySet="UserProfiles">
+          <ScalarProperty Name="ProfileId" ColumnName="ProfileId" />
+          <ScalarProperty Name="PicPath" ColumnName="PicPath" />
+          <ScalarProperty Name="PicDesc" ColumnName="PicDesc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="JobApplieds">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.JobApplied)">
+        <MappingFragment StoreEntitySet="JobApplieds">
+          <ScalarProperty Name="JobAppId" ColumnName="JobAppId" />
+          <ScalarProperty Name="ApplicationDate" ColumnName="ApplicationDate" />
+          <ScalarProperty Name="AppliedMessage" ColumnName="AppliedMessage" />
+          <ScalarProperty Name="JobPostingJobPostId" ColumnName="JobPostingJobPostId" />
+          <ScalarProperty Name="JobSeekerJSId" ColumnName="JobSeekerJSId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="UserRecruiter" TypeName="Model1.UserRecruiter" StoreEntitySet="Users">
+      <EndProperty Name="Recruiter">
+        <ScalarProperty Name="RecId" ColumnName="Recruiter_RecId" />
+      </EndProperty>
+      <EndProperty Name="User">
+        <ScalarProperty Name="UserId" ColumnName="UserId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="UserJobSeeker" TypeName="Model1.UserJobSeeker" StoreEntitySet="Users">
+      <EndProperty Name="JobSeeker">
+        <ScalarProperty Name="JSId" ColumnName="JobSeeker_JSId" />
+      </EndProperty>
+      <EndProperty Name="User">
+        <ScalarProperty Name="UserId" ColumnName="UserId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="JobSeekerLocation" TypeName="Model1.JobSeekerLocation" StoreEntitySet="JobSeekers">
+      <EndProperty Name="Location">
+        <ScalarProperty Name="LocationId" ColumnName="Location_LocationId" />
+      </EndProperty>
+      <EndProperty Name="JobSeeker">
+        <ScalarProperty Name="JSId" ColumnName="JSId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="RecruiterLocation" TypeName="Model1.RecruiterLocation" StoreEntitySet="Recruiters">
+      <EndProperty Name="Location">
+        <ScalarProperty Name="LocationId" ColumnName="Location_LocationId" />
+      </EndProperty>
+      <EndProperty Name="Recruiter">
+        <ScalarProperty Name="RecId" ColumnName="RecId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="UserCompany" TypeName="Model1.UserCompany" StoreEntitySet="Users">
+      <EndProperty Name="Company">
+        <ScalarProperty Name="CompId" ColumnName="Company_CompId" />
+      </EndProperty>
+      <EndProperty Name="User">
+        <ScalarProperty Name="UserId" ColumnName="UserId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="CompanyLocation" TypeName="Model1.CompanyLocation" StoreEntitySet="Locations">
+      <EndProperty Name="Company">
+        <ScalarProperty Name="CompId" ColumnName="Company_CompId" />
+      </EndProperty>
+      <EndProperty Name="Location">
+        <ScalarProperty Name="LocationId" ColumnName="LocationId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="JobAreaJobPosting" TypeName="Model1.JobAreaJobPosting" StoreEntitySet="JobAreaJobPosting">
+      <EndProperty Name="JobArea">
+        <ScalarProperty Name="JobAreaId" ColumnName="JobAreas_JobAreaId" />
+      </EndProperty>
+      <EndProperty Name="JobPosting">
+        <ScalarProperty Name="JobPostId" ColumnName="JobPostings_JobPostId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="JobSeekerUserMedia" TypeName="Model1.JobSeekerUserMedia" StoreEntitySet="JobSeekers">
+      <EndProperty Name="UserMedia">
+        <ScalarProperty Name="UMediaId" ColumnName="UserMedia_UMediaId" />
+      </EndProperty>
+      <EndProperty Name="JobSeeker">
+        <ScalarProperty Name="JSId" ColumnName="JSId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="UserUserProfile" TypeName="Model1.UserUserProfile" StoreEntitySet="Users">
+      <EndProperty Name="UserProfile">
+        <ScalarProperty Name="ProfileId" ColumnName="UserProfile_ProfileId" />
+      </EndProperty>
+      <EndProperty Name="User">
+        <ScalarProperty Name="UserId" ColumnName="UserId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="JobPostingUserMedia" TypeName="Model1.JobPostingUserMedia" StoreEntitySet="JobPostings">
+      <EndProperty Name="UserMedia">
+        <ScalarProperty Name="UMediaId" ColumnName="UserMedia_UMediaId" />
+      </EndProperty>
+      <EndProperty Name="JobPosting">
+        <ScalarProperty Name="JobPostId" ColumnName="JobPostId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="CompanyUserMedia" TypeName="Model1.CompanyUserMedia" StoreEntitySet="Companies">
+      <EndProperty Name="UserMedia">
+        <ScalarProperty Name="UMediaId" ColumnName="UserMedia_UMediaId" />
+      </EndProperty>
+      <EndProperty Name="Company">
+        <ScalarProperty Name="CompId" ColumnName="CompId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="JobPostingLocation" TypeName="Model1.JobPostingLocation" StoreEntitySet="JobPostings">
+      <EndProperty Name="Location">
+        <ScalarProperty Name="LocationId" ColumnName="Location_LocationId" />
+      </EndProperty>
+      <EndProperty Name="JobPosting">
+        <ScalarProperty Name="JobPostId" ColumnName="JobPostId" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>
